@@ -47,7 +47,8 @@ class Song
     new_song = self.new
     new_song.name = (name.split(" - ")[1].chomp(".mp3"))
     new_song.artist_name = (name.split(" - ")[0])
-    @@all << new_song
+    new_song.save
+    new_song
   end
 
 end
